@@ -10,8 +10,10 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class LoginPage extends BaseTest {
+public class LoginPage {
 
+
+    private WebDriver driver;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;

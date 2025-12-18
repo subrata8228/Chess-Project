@@ -1,16 +1,15 @@
 package base;
 
+import org.testng.annotations.*;
 import utils.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 
 
 public class BaseTest {
 
-     protected WebDriver driver;
+     public WebDriver driver;
 
     @BeforeTest
     public void setup() {
@@ -21,7 +20,7 @@ public class BaseTest {
 
 
     }
-    @AfterTest(enabled = true)
+    @AfterTest
     public void quitDriver() {
         driver.quit();
     }
